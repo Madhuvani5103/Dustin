@@ -1,0 +1,59 @@
+body{
+    background-color: #EAE7DC;
+}
+h3{
+    color: #E85A4F;
+    font-size: 40px;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+.email{
+    font-size: 30px;
+    color: gray;
+    padding-left: 20px;
+    
+}
+p{
+    color: gray;
+    font-size: 30px;
+    text-align: center;
+}
+.verify{
+    outline: 1px solid black;
+    width: 80%;
+    height: 400px;
+    margin-left: 150px;
+    margin-top: 150px;
+
+}
+.ver-inner{
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.ver-inner>input{
+    width: 150px;
+    position: relative;
+    left: 90px;
+}
+.ver-inner>a{
+    display: block;
+    font-size: 15px;
+    color: gray;
+    margin-top: 15px;
+    position: relative;
+    left: 90px;
+}
+
+.submit{
+    margin-left: 800px;
+    margin-top: 70px;
+    width: 120px;
+    border: 2px solid gainsboro;
+    border-radius: 5px;
+    background-color: #D7E9F7;
+}
+.submit:hover{
+    background-color: #D7E9F7;
+}

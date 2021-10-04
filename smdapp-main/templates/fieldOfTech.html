@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/css/fieldofTech.css') }}">
+
+    <link rel="stylesheet" href="cssfiles/fieldofTech.css">
+    <title>Dustin</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+<style>
+    .hiding-elements{
+    visibility: hidden;
+    position: absolute;   
+}
+body{
+    background-color: #eae7dc;
+}
+
+</style>
+<body>
+    <!-- -->
+    <!-- <form  action="/fieldOfTech" method="post"> -->
+    <div class="animation-area">
+        <ul class="box-area"><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+    
+    <div class="tech">
+        <h1>Technologies</h1>
+        <input type="checkbox" name="AE" id="AE" value="0" class="f1" onclick="fieldOFTech(id)" >
+        <label for="AE">Aeronautical engineering</label><br>
+        <input type="checkbox" name="CSE" id="CSE" value="0" class="f2" onclick="fieldOFTech(id)">
+        <label for="CSE">computer science and engineering</label><br>
+        <input type="checkbox" name="ME" id="ME" value="0" class="f3" onclick="fieldOFTech(id)">
+        <label for="ME">Mechanical engineering</label><br>
+        <input type="checkbox" name="CIV" id="CIV" value="0" class="f4" onclick="fieldOFTech(id)">
+        <label for="CIV">CIVIL engineering</label><br>
+        <input type="checkbox" name="ECE" id="ECE" value="0" class="f5" onclick="fieldOFTech(id)">
+        <label for="ECE">Electronics and communications engineering</label><br>
+        <input type="checkbox" name="CME" id="CME" value="0" class="f6" onclick="fieldOFTech(id)">
+        <label for="CME">Chemical engineering</label><br>
+        <input type="hidden" name="final-FOT" id="final-FOT" value="">
+        <button class="tech-sel btn btn-light btn-outline" type="submit" onclick="finalValFOT()">selected</button>
+    </div>
+
+    <form class="hiding-elements form-tech" action="/eval2" method="post">
+
+    <h2>Field of technologies</h2>
+
+    <div class="AE1 hiding-elements each-tech">
+        <h4>AE</h4>
+        <input type="checkbox" name="ae1" id="ae1" value="0" onclick="changeValTech(id)" >
+        <label for="ae1" >Spacecraft systems</label> <br>
+        <input type="checkbox" name="ae2" id="ae2" value="0" onclick="changeValTech(id)" >
+        <label for="ae2" >Computer-aided design</label>  <br>
+        <input type="checkbox" name="ae3" id="ae3" value="0" onclick="changeValTech(id)" >
+        <label for="ae3" >Ground Vehicle Systems</label><br>
+        <input type="checkbox" name="ae4" id="ae4" value="0" onclick="changeValTech(id)" >
+        <label for="ae4" >Structural analysis</label><br>
+        <input type="checkbox" name="ae5" id="ae5" value="0" onclick="changeValTech(id)" >
+        <label for="ae5" >Linear control systems</label><br>
+        <input type="checkbox" name="ae6" id="ae6" value="0" onclick="changeValTech(id)" >
+        <label for="ae6" >Propulsion systems</label><br>
+        <input type="checkbox" name="ae7" id="ae7" value="0" onclick="changeValTech(id)" >
+        <label for="ae7" >Vehicle design</label><br>
+
+    </div>
+  
+
+    <div class="CSE1 hiding-elements each-tech">
+        <h4>CSE</h4>
+        <input type="checkbox" name="cse1" id="cse1" value=0 onclick="changeValTech(id)" >
+        <label for="cse1">ML& AI</label><br>
+        <input type="checkbox" name="cse2" id="cse2" value=0 onclick="changeValTech(id)" >
+        <label for="cse2">Data science</label><br>
+        <input type="checkbox" name="cse3" id="cse3" value=0 onclick="changeValTech(id)" >
+        <label for="cse3">competitive programming</label><br>
+        <input type="checkbox" name="cse4" id="cse4" value=0 onclick="changeValTech(id)" >
+        <label for="cse4">Cyber Security</label><br>
+        <input type="checkbox" name="cse5" id="cse5" value=0 onclick="changeValTech(id)" >
+        <label for="cse5">Web technology (front end, back end)</label><br>
+        <input type="checkbox" name="cse6" id="cse6" value=0 onclick="changeValTech(id)" >
+        <label for="cse6">Databases</label><br>
+        <input type="checkbox" name="cse7" id="cse7" value=0 onclick="changeValTech(id)" >
+        <label for="cse7">Cloud technology</label><br>
+        <input type="checkbox" name="cse8" id="cse8" value=0 onclick="changeValTech(id)" >
+        <label for="cse8">Computer Networks</label><br>
+        <input type="checkbox" name="cse9" id="cse9" value=0 onclick="changeValTech(id)" >
+        <label for="cse9">Research and development</label><br>
+        <input type="checkbox" name="cse10" id="cse10" value=0 onclick="changeValTech(id)" >
+        <label for="cse10">Project management and Operations research</label><br>
+        <input type="checkbox" name="cse11" id="cse11" value=0 onclick="changeValTech(id)" >
+        <label for="cse11">Data structures</label><br>
+        <input type="checkbox" name="cse12" id="cse12" value=0 onclick="changeValTech(id)" >
+        <label for="cse12">Python Programming</label><br>
+
+    </div>
+  
+
+
+    <div class="ME1 hiding-elements each-tech">
+        <h4>ME</h4>
+        <input type="checkbox" name="me1" id="me1" value="0" onclick="changeValTech(id)" >
+        <label for="me1">Nanotechnology</label><br>
+        <input type="checkbox" name="me2" id="me2" value="0" onclick="changeValTech(id)" >
+        <label for="me2">Production planning</label><br>
+        <input type="checkbox" name="me3" id="me3" value="0" onclick="changeValTech(id)" >
+        <label for="me3">Robotics</label><br>
+        <input type="checkbox" name="me4" id="me4" value="0" onclick="changeValTech(id)" >
+        <label for="me4">Structural analysis</label><br>
+        <input type="checkbox" name="me5" id="me5" value="0" onclick="changeValTech(id)" >
+        <label for="me5">Computer Aided Design (CAD)</label><br>
+    </div>
+
+    <div class="CIV1 hiding-elements each-tech">
+        <h4>CIV</h4>
+        <input type="checkbox" name="civ1" id="civ1" value="0" onclick="changeValTech(id)" >
+        <label for="civ1">Building Information Modelling (BIM)</label><br>
+        <input type="checkbox" name="civ2" id="civ2" value="0" onclick="changeValTech(id)" >
+        <label for="civ2">Cloud And Mobile Technology</label><br>
+        <input type="checkbox" name="civ3" id="civ3" value="0" onclick="changeValTech(id)" >
+        <label for="civ3">Drones Or Unmanned Aerial Vehicles (UAVs)</label><br>
+        <input type="checkbox" name="civ4" id="civ4" value="0" onclick="changeValTech(id)" >
+        <label for="civ4">Virtual Reality</label><br>
+        <input type="checkbox" name="civ5" id="civ5" value="0" onclick="changeValTech(id)" >
+        <label for="civ5">Augmented Reality</label><br>
+        <input type="checkbox" name="civ6" id="civ6" value="0" onclick="changeValTech(id)" >
+        <label for="civ6">3D Printing</label><br>
+    </div>
+   
+    <div class="ECE1 hiding-elements each-tech">
+        <h4>ECE</h4>
+        <input type="checkbox" name="ece1" id="ece1" value="0" onclick="changeValTech(id)" >
+        <label for="ece1">3D biometrics</label><br>
+        <input type="checkbox" name="ece2" id="ece2" value="0" onclick="changeValTech(id)" >
+        <label for="ece2">Analog and Radio Frequency Circuits</label><br>
+        <input type="checkbox" name="ece3" id="ece3" value="0" onclick="changeValTech(id)" >
+        <label for="ece3">Communication & Signal Processing</label><br>
+        <input type="checkbox" name="ece4" id="ece4" value="0" onclick="changeValTech(id)" >
+        <label for="ece4">Computer & Digital Systems</label><br>
+        <input type="checkbox" name="ece5" id="ece5" value="0" onclick="changeValTech(id)" >
+        <label for="ece5">Networking</label><br>
+        <input type="checkbox" name="ece6" id="ece6" value="0" onclick="changeValTech(id)" >
+        <label for="ece6">Computer vision & Image processing</label><br>
+    </div>
+    
+    <div class="CME1 hiding-elements each-tech">
+        <h4>CHEM E</h4>
+        <input type="checkbox" name="cme1" id="cme1" value="0" onclick="changeValTech(id)" >
+        <label for="cme1">Cleaner energy sources</label><br>
+        <input type="checkbox" name="cme2" id="cme2" value="0" onclick="changeValTech(id)" >
+        <label for="cme2">Greener chemical processes</label><br>
+        <input type="checkbox" name="cme3" id="cme3" value="0" onclick="changeValTech(id)" >
+        <label for="cme3">Earth-friendly plastics</label><br>
+        <input type="checkbox" name="cme4" id="cme4" value="0" onclick="changeValTech(id)" >
+        <label for="cme4">Innovative consumer goods</label><br>
+        <input type="checkbox" name="cme5" id="cme5" value="0" onclick="changeValTech(id)" >
+        <label for="cme5">Rechargeable batteries</label><br>
+        <input type="checkbox" name="cme6" id="cme6" value="0" onclick="changeValTech(id)" >
+        <label for="cme6">Medical microdevices</label><br>
+        <input type="checkbox" name="cme7" id="cme7" value="0" onclick="changeValTech(id)" >
+        <label for="cme7">Vaccines to protect against epidemics</label><br>
+        <input type="checkbox" name="cme8" id="cme8" value="0" onclick="changeValTech(id)">
+        <label for="cme8">Chemotherapy with reduced side effects Bottom of Form</label><br>
+    </div>
+    <button class="tech-submit btn btn-light btn-outline" type="submit" onclick="getBinTech()">submit</button>
+    <!-- this is the hidden input for technologies -->
+    <input type="hidden" name="finalBinaryForTech" id="final-binary-for-tech" val="">
+    </form>
+
+</div>
+<script>
+    //////for field of technologies/////
+    
+    fieldOFTech=(id)=>{
+            $("#"+id).is(":checked")==true ? $("#"+id).val(id) : $("#"+id).val(0);
+            //console.log($("#"+id).val(),$("#"+id).is(":checked"),id);
+        }
+        /////final value of field of tech (FOT) ///////
+        finalValFOT=()=>{
+            $('.animation-area').css('height','fit-content');
+            let s='0';
+            for(let i=1;i<=6;i++){
+                let r=$('.f'+i).val();
+                if (r!='0' || r!=0){
+                s=s+" "+r;}
+            }
+           // console.log(s);
+            let s1=s.slice(1,s.length).trim();
+            $("#final-FOT").val(s1);
+           // console.log(s1);
+            showDataTech(s1);
+        }
+        ////////////////////////
+
+
+        ////////////////////technololgies////
+        let arrFot;
+        showDataTech=(s1)=>{
+            let defarr=["AE","CSE","ME","CIV","ECE","CME"];
+            $(".form-tech").removeClass("hiding-elements");
+            arrFot=s1.split(" ");
+            //console.log("arr is ",arr,"s1 is ",s1);
+            arrFot.forEach(e => {
+                $('.'+e+'1').removeClass("hiding-elements");
+            });
+            defarr.forEach(e=>{
+                if (arrFot.includes(e)==false){
+                    $('.'+e+'1').addClass("hiding-elements");
+                }
+
+            });
+            
+
+        }
+
+        changeValTech=(id)=>{
+            $("#"+id).is(":checked")==true ? $("#"+id).val(1) : $("#"+id).val(0);
+        }
+
+        getBinTech=()=>{
+            let s='@';
+            let binVal=[];
+            arrFot.forEach(v=>{
+                console.log(v,"v is");
+                s=s+v;
+                if(v=="AE"){
+                    for(i=1;i<=7;i++){
+                        s=s+$('#'+"ae"+i).val();
+                    }
+                }
+                else if(v=="CSE"){
+                    for(i=1;i<=12;i++){
+                        s=s+$('#'+"cse"+i).val();
+                    }
+                }
+                else if(v=="ME"){
+                    for(i=1;i<=5;i++){
+                        s=s+$('#'+"me"+i).val();
+                    }
+                }
+                else if(v=="CIV"){
+                    for(i=1;i<=6;i++){
+                        s=s+$('#'+"civ"+i).val();
+                    }
+                }
+                else if(v=="ECE"){
+                    for(i=1;i<=6;i++){
+                        s=s+$('#'+"ece"+i).val();
+                    }
+                }
+                else if(v=="CME"){
+                    for(i=1;i<=8;i++){
+                        s=s+$('#'+"cme"+i).val();
+                    }
+                }
+
+
+            });
+            let f=s.slice(1,s.length);
+            console.log(s);
+            
+            var value=$("#final-binary-for-tech").val(f);
+            $.ajax({
+                url:'/fieldOfTech.html',
+                type:'POST',
+                data:{'value':value},
+                success : function(response)
+                {
+                    console.log(response);
+                }
+            })
+        }
+</script>
+<script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+</body>
+</html>

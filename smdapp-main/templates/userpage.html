@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/css/userpage.css') }}">
+    <link rel="stylesheet" href="cssfiles/userpage.css">
+    <title>DUSTIN</title>
+</head>
+<body>
+    <div class="animation-area">
+        <ul class="box-area"><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+    
+
+    <div class="main-name">
+        
+        <h1>DUSTIN</h1>
+    
+        <input class="search-bar" type="text" placeholder="Search" name="" id="">
+        <a href="profile.html" target="_blank"><img class="profile-info" src="" alt=""></a>
+    </div>
+    
+    <div class="container connections">
+            {% for key in result %}
+        <a href="connections.html" target="_blank">
+            <div class="card-1">
+                <div class="imgdiv-1">
+                    <img class="img-1" src="https://i.picsum.photos/id/352/536/354.jpg?hmac=KJY6_1HLr8wHiCVoobgH4si26WuZa3_EgljOGSTt1WY" alt="">
+                </div>
+
+                <div class="info">
+                    <div> <h4><b>{{key[2]}}</b></h4> </div>                  <!-- Real Name-->
+                    <p><b>PERSONALITY:</b> {{key[9]}}</p>                               <!-- Personality type-->
+                    <p><b>HOBBIES:</b> {{key[11]}}</p>                     <!-- Hobbies-->
+                    <p><b>INTERESTS:</b> {{key[10]}}</p>                <!-- Technologies-->
+                    <p><b>TYPE OF MUSIC LISTENER:</b> {{key[8]}}</p>       <!-- Music listener type-->
+                </div>
+                <div class="online-txt">
+                    <p>online</p>
+                </div>
+            
+            </div></a>
+            {% endfor %}
+
+        <!--<a href="connections.html"> <div class="card-1">
+            <div class="imgdiv-1">
+                <img class="img-1" src="https://i.picsum.photos/id/943/536/354.jpg?hmac=q6v_FP9uVbhsSsBKgCVwrljQxupJUMCZVHaHE0O9RsQ" alt="">
+            </div>
+            <div class="info">
+                <p>Name</p>
+                <p>Mutual Attributes</p>
+            </div>
+            <div class="online-txt">
+                <p>online</p>
+            </div>
+        </div></a>
+
+        <a href="connections.html"> <div class="card-1">
+            <div class="imgdiv-1">
+                <img class="img-1" src="https://i.picsum.photos/id/413/536/354.jpg?hmac=gWzeJ37G-MqxxyO9UpTc_dK2Bu77KvFEugYCzbdHXOA" alt="">
+            </div>
+            <div class="info">
+                <p>Name</p>
+                <p>Mutual Attributes</p>
+            </div>
+            <div class="online-txt">
+                <p>online</p>
+            </div>
+        </div></a>
+
+
+        <a href="connections.html"> <div class="card-1">
+            <div class="imgdiv-1">
+                <img class="img-1" src="https://i.picsum.photos/id/685/536/354.jpg?hmac=Hd6dp2Be-rOnk4Iqn2P0JT4dbWx6ZwdihOS9q9KbXvs" alt="">
+            </div>
+            <div class="info">
+                <p>Name</p>
+                <p>Mutual Attributes</p>
+            </div>
+            <div class="online-txt">
+                <p>offline</p>
+            </div>
+        </div></a>
+
+
+        <a href="connections.html"> <div class="card-1">
+            <div class="imgdiv-1">
+                <img class="img-1" src="https://i.picsum.photos/id/237/536/354.jpg?hmac=i0yVXW1ORpyCZpQ-CknuyV-jbtU7_x9EBQVhvT5aRr0" alt="">
+            </div>
+            <div class="info">
+                <p>Name</p>
+                <p>Mutual Attributes</p>
+            </div>
+            <div class="online-txt">
+                <p>offline</p>
+            </div>
+        </div></a> -->
+
+    </div>
+
+    <div class="connections community">
+        <h3>Recommended</h3>
+        <a href=""> <button type="button" class="recom-1 btn btn-light btn-outline">Chess</button></a>
+        <a href=""> <button type="button" class="recom-1 btn btn-light btn-outline">Novels</button></a>
+        <a href=""> <button type="button" class="recom-1 btn btn-light btn-outline">Cricket</button></a>
+        <a href=""> <button type="button" class="recom-1 btn btn-light btn-outline">Coding</button></a>
+        <a href=""> <button type="button" class="recom-1 btn btn-light btn-outline">Football</button></a>
+        <a href=""> <button type="button" class="recom-1 btn btn-light btn-outline">Movies</button></a>
+        
+        <h5>others</h5>
+        <div class="recom-1">
+            <h5></h5>
+        </div>
+        <div class="recom-1">
+            <h5></h5>
+        </div>
+        <div class="recom-1">
+            <h5></h5>
+        </div>
+        <div class="recom-1">
+            <h5></h5>
+        </div>
+        <div class="recom-1">
+            <h5></h5>
+        </div>
+        <div class="recom-1">
+            <h5></h5>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

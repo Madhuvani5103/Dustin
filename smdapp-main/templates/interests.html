@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/css/interests.css') }}">
+
+    <link rel="stylesheet" href="cssfiles/interests.css">
+    <title>Document</title>
+    <!-- <style>
+        body{
+            background-color: #eae7dc;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- <p><input type="text" name="tofl" value="Score range 0-120" style=" border-radius: 8px;"></p> -->
+    <div class="animation-area">
+		<ul class="box-area"><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+    
+
+    <div>
+    <form class="whole-form" action="/eval" method="post">
+        <div class="com-changes">
+            <h4><label class="music-title" for="music">Music</label></h4>
+            <select class="form-select" id="music" name="music" style="width: 200px;" >
+            
+                <option value="0" selected>Seekers</option>
+                <option value="1" >Sitters</option>
+                <option value="2" >Standers</option>
+            </select>
+        </div>
+
+        <div class="com-changes">
+           <h4> <label for="movie">Movie</label></h4>
+            <select class="form-select" name="movie" id="movie" style="width: 200px;">
+                <option value="0" selected>The Deep Thinker</option>
+                <option value="1">The Casual Dude</option>
+                <option value="2">Dynamite Dan</option>
+                <option value="3">The Dramatic</option>
+                <option value="4">Fantasy Extravagant</option>
+                <option value="5">The Comedian</option>
+                <option value="6">The Stalker</option>
+            </select>
+        </div>
+    
+        <div  class="com-changes">
+           <h4> <label  for="personalityType">Personality Type</label></h4>
+            <select class="form-select" name="personalityType" id="personalityType"  style="width: 200px;">
+                <option value="0" selected>The Inspector – ISTJ</option>
+                <option value="1" >The Counselor – INFJ</option>
+                <option value="2" >The Mastermind – INTJ</option>
+                <option value="3" >The Giver – ENFJ</option>
+                <option value="4" >The Craftsman – ISTP</option>
+                <option value="5" >The Provider – ESFJ</option>
+                <option value="6" >The Idealist – INFP</option>
+                <option value="7" >The Performer – ESFP</option>
+                <option value="8" >The Champion – ENFP</option>
+                <option value="9" >The Doer – ESTP</option>
+                <option value="10" >The Supervisor – ESTJ</option>
+                <option value="11" >The Commander – ENTJ</option>
+                <option value="12" >The Thinker – INTP</option>
+                <option value="13" >The Nurturer – ISFJ</option>
+                <option value="14" >The Visionary – ENTP</option>
+                <option value="15" >The Composer – ISFP</option>
+            
+            </select>
+        </div>
+
+        <div class="hobbies-form">
+            <h1><label for="hobbies">Hobbies</label></h1>
+            <input type="checkbox" name="Reading" id="Reading" class="n1" value=0 onclick="hobbies(id)">
+            <label for="Reading">Reading</label><br>
+            <input type="checkbox" name="Traveling" id="Traveling" value=0 class="n2"  onclick="hobbies(id)">
+            <label for="Traveling">Traveling</label><br>
+            <input type="checkbox" name="Crafting" id="Crafting" value=0 class="n3"  onclick="hobbies(id)">
+            <label for="Crafting">Crafting</label><br>
+            <input type="checkbox" name="Photography" id="Photography" value=0  class="n4" onclick="hobbies(id)">
+            <label for="Photography">Photography</label><br>
+            <input type="checkbox" name="Collecting" id="Collecting" value=0 class="n5"  onclick="hobbies(id)">
+            <label for="Collecting">Collecting</label><br>
+            <input type="checkbox" name="Music" id="Music" value=0 class="n6"  onclick="hobbies(id)">
+            <label for="Music">Music</label><br>
+            <input type="checkbox" name="Gardening" id="Gardening" class="n7"  value=0 onclick="hobbies(id)">
+            <label for="Gardening">Gardening</label><br>
+            <input type="checkbox" name="Gaming" id="Gaming" value=0  class="n8" onclick="hobbies(id)">
+            <label for="Gaming">Gaming</label><br>
+            <input type="checkbox" name="Sports" id="Sports" value=0 class="n9"  onclick="hobbies(id)">
+            <label for="Sports">Sports</label><br>
+            <input type="checkbox" name="Fitness" id="Fitness" value=0 class="n10"  onclick="hobbies(id)">
+            <label for="Fitness">Fitness</label><br>
+            <input type="checkbox" name="Cooking" id="Cooking" value=0 class="n11"  onclick="hobbies(id)">
+            <label for="Cooking">Cooking</label><br>
+            <input type="checkbox" name="Videography" id="Videography" class="n12"  value=0 onclick="hobbies(id)">
+            <label for="Videography">Videography</label><br>
+            <input type="checkbox" name="Writing" id="Writing" value=0 class="n13"  onclick="hobbies(id)">
+            <label for="Writing">Writing</label><br>
+            <input type="checkbox" name="Exploration" id="Exploration" value=0 class="n14"  onclick="hobbies(id)">
+            <label for="Exploration">Exploration</label><br>
+            <!-- this is the hidden input for hobbies  -->
+            <input type="hidden" name="finalValue" value="" id="final-value">
+
+        <button class="interest-submit btn btn-light btn-outline" type="submit" onclick="final()">selected</button>       
+    </div>
+    
+    </form>
+    </div>
+    </div>
+    <script>
+        function hobbies(id){
+            $("#"+id).is(":checked")==true ? $("#"+id).val(1) : $("#"+id).val(0);
+            //console.log($("#"+id).val(),$("#"+id).is(":checked"),id);
+        }
+        //to get binary value for hobbies
+        function final(){
+            let s='a';
+            for(i=1;i<=14;i++){
+                s=s+$('.n'+i).val();
+            }
+            //console.log(s);
+            let s1=s.slice(1,s.length);
+            //console.log(s1);
+            var value = $("#final-value").val(s1);
+            $.ajax({
+                url:'/index1.html',
+                type:'POST',
+                data:{'value':value},
+                success : function(response)
+                {
+                    console.log(response);
+                },
+                error: function(error)
+                {
+                console.log(error);
+                }
+            })
+        }
+        /////////////////
+       
+
+    </script>
+
+    <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</body>
+</html>
+
